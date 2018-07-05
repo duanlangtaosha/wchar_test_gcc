@@ -31,8 +31,8 @@
     Program header entries: 1
     Section header entries: 16
 
-    Program header offset: 341240 (0x000534f8)
-    Section header offset: 341272 (0x00053518)
+    Program header offset: 336444 (0x0005223c)
+    Section header offset: 336476 (0x0005225c)
 
     Section header string table index: 15
 
@@ -2734,8 +2734,8 @@
         0x08001622:    0000        ..      MOVS     r0,r0
     $d.realdata
     .constwstring
-        0x08001624:    e15e6d93    .m^.    DCD    3781062035
-        0x08001628:    00006d57    Wm..    DCD    27991
+        0x08001624:    56fd4e2d    -N.V    DCD    1459441197
+        0x08001628:    00000000    ....    DCD    0
     Region$$Table$$Base
         0x0800162c:    0800164c    L...    DCD    134223436
         0x08001630:    20000000    ...     DCD    536870912
@@ -2766,7 +2766,7 @@
 
 
 ** Section #6 '.debug_info' (SHT_PROGBITS)
-    Size   : 32160 bytes
+    Size   : 28328 bytes
 
 
 ** Section #7 '.debug_line' (SHT_PROGBITS)
@@ -2800,7 +2800,7 @@
 
 
 ** Section #14 '.comment' (SHT_PROGBITS)
-    Size   : 16860 bytes
+    Size   : 15896 bytes
 
 
 ** Section #15 '.shstrtab' (SHT_STRTAB)

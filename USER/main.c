@@ -4,15 +4,15 @@
 #include "led.h"
 #include "wchar.h"
 
-//ALIENTEK Êé¢Á¥¢ËÄÖSTM32F407ÂºÄÂèëÊùø ÂÆûÈ™å1
-//Ë∑ëÈ©¨ÁÅØÂÆûÈ™å -Â∫ìÂáΩÊï∞ÁâàÊú¨
-//ÊäÄÊúØÊîØÊåÅÔºöwww.openedv.com
-//Ê∑òÂÆùÂ∫óÈì∫Ôºöhttp://eboard.taobao.com  
-//ÂπøÂ∑ûÂ∏ÇÊòüÁøºÁîµÂ≠êÁßëÊäÄÊúâÈôêÂÖ¨Âè∏  
-//‰ΩúËÄÖÔºöÊ≠£ÁÇπÂéüÂ≠ê @ALIENTEK
+//ALIENTEK ÃΩÀ˜’ﬂSTM32F407ø™∑¢∞Â  µ—È1
+//≈‹¬Ìµ∆ µ—È -ø‚∫Ø ˝∞Ê±æ
+//ºº ı÷ß≥÷£∫www.openedv.com
+//Ã‘±¶µÍ∆Ã£∫http://eboard.taobao.com  
+//π„÷› ––«“ÌµÁ◊”ø∆ºº”–œﬁπ´Àæ  
+//◊˜’ﬂ£∫’˝µ„‘≠◊” @ALIENTEK
 
 const wchar_t *p_wchar_test = NULL;
-const wchar_t *p_test = L"‰∏≠ÂõΩ";
+const wchar_t *p_test = L"÷–π˙";
 
 //const char *p_wchar_test = NULL;
 //const char *p_test = "abcd";
@@ -20,40 +20,40 @@ const wchar_t *p_test = L"‰∏≠ÂõΩ";
 int main(void)
 { 
 //	wchar_t *p_test = L"abcd";
-	delay_init(168);		  //ÂàùÂßãÂåñÂª∂Êó∂ÂáΩÊï∞
-	LED_Init();		        //ÂàùÂßãÂåñLEDÁ´ØÂè£
+	delay_init(168);		  //≥ı ºªØ—” ±∫Ø ˝
+	LED_Init();		        //≥ı ºªØLED∂Àø⁄
 	
-  /**‰∏ãÈù¢ÊòØÈÄöËøáÁõ¥Êé•Êìç‰ΩúÂ∫ìÂáΩÊï∞ÁöÑÊñπÂºèÂÆûÁé∞IOÊéßÂà∂**/
+  /**œ¬√Ê «Õ®π˝÷±Ω”≤Ÿ◊˜ø‚∫Ø ˝µƒ∑Ω Ω µœ÷IOøÿ÷∆**/
 
 	p_wchar_test = p_test;
 //  p = p_test;
 	while(1)
 	{
-	GPIO_ResetBits(GPIOF,GPIO_Pin_9);  //LED0ÂØπÂ∫îÂºïËÑöGPIOF.9Êãâ‰ΩéÔºå‰∫Æ  Á≠âÂêåLED0=0;
-	GPIO_SetBits(GPIOF,GPIO_Pin_10);   //LED1ÂØπÂ∫îÂºïËÑöGPIOF.10ÊãâÈ´òÔºåÁÅ≠ Á≠âÂêåLED1=1;
-	delay_ms(500);  		   //Âª∂Êó∂300ms
-	GPIO_SetBits(GPIOF,GPIO_Pin_9);	   //LED0ÂØπÂ∫îÂºïËÑöGPIOF.0ÊãâÈ´òÔºåÁÅ≠  Á≠âÂêåLED0=1;
-	GPIO_ResetBits(GPIOF,GPIO_Pin_10); //LED1ÂØπÂ∫îÂºïËÑöGPIOF.10Êãâ‰ΩéÔºå‰∫Æ Á≠âÂêåLED1=0;
-	delay_ms(500);                     //Âª∂Êó∂300ms
+	GPIO_ResetBits(GPIOF,GPIO_Pin_9);  //LED0∂‘”¶“˝Ω≈GPIOF.9¿≠µÕ£¨¡¡  µ»Õ¨LED0=0;
+	GPIO_SetBits(GPIOF,GPIO_Pin_10);   //LED1∂‘”¶“˝Ω≈GPIOF.10¿≠∏ﬂ£¨√ µ»Õ¨LED1=1;
+	delay_ms(500);  		   //—” ±300ms
+	GPIO_SetBits(GPIOF,GPIO_Pin_9);	   //LED0∂‘”¶“˝Ω≈GPIOF.0¿≠∏ﬂ£¨√  µ»Õ¨LED0=1;
+	GPIO_ResetBits(GPIOF,GPIO_Pin_10); //LED1∂‘”¶“˝Ω≈GPIOF.10¿≠µÕ£¨¡¡ µ»Õ¨LED1=0;
+	delay_ms(500);                     //—” ±300ms
 	}
 }
 
 
 /**
-*******************‰∏ãÈù¢Ê≥®ÈáäÊéâÁöÑ‰ª£Á†ÅÊòØÈÄöËøá ‰ΩçÂ∏¶ Êìç‰ΩúÂÆûÁé∞IOÂè£ÊéßÂà∂**************************************
+*******************œ¬√Ê◊¢ ÕµÙµƒ¥˙¬Î «Õ®π˝ Œª¥¯ ≤Ÿ◊˜ µœ÷IOø⁄øÿ÷∆**************************************
 	
 int main(void)
 { 
  
-	delay_init(168);		  //ÂàùÂßãÂåñÂª∂Êó∂ÂáΩÊï∞
-	LED_Init();		        //ÂàùÂßãÂåñLEDÁ´ØÂè£
+	delay_init(168);		  //≥ı ºªØ—” ±∫Ø ˝
+	LED_Init();		        //≥ı ºªØLED∂Àø⁄
   while(1)
 	{
-     LED0=0;			  //LED0‰∫Æ
-	   LED1=1;				//LED1ÁÅ≠
+     LED0=0;			  //LED0¡¡
+	   LED1=1;				//LED1√
 		 delay_ms(500);
-		 LED0=1;				//LED0ÁÅ≠
-		 LED1=0;				//LED1‰∫Æ
+		 LED0=1;				//LED0√
+		 LED1=0;				//LED1¡¡
 		 delay_ms(500);
 	 }
 }
@@ -61,19 +61,19 @@ int main(void)
  **/	
 	
 /**
-*******************‰∏ãÈù¢Ê≥®ÈáäÊéâÁöÑ‰ª£Á†ÅÊòØÈÄöËøá Áõ¥Êé•Êìç‰ΩúÂØÑÂ≠òÂô® ÊñπÂºèÂÆûÁé∞IOÂè£ÊéßÂà∂**************************************
+*******************œ¬√Ê◊¢ ÕµÙµƒ¥˙¬Î «Õ®π˝ ÷±Ω”≤Ÿ◊˜ºƒ¥Ê∆˜ ∑Ω Ω µœ÷IOø⁄øÿ÷∆**************************************
 int main(void)
 { 
  
-	delay_init(168);		  //ÂàùÂßãÂåñÂª∂Êó∂ÂáΩÊï∞
-	LED_Init();		        //ÂàùÂßãÂåñLEDÁ´ØÂè£
+	delay_init(168);		  //≥ı ºªØ—” ±∫Ø ˝
+	LED_Init();		        //≥ı ºªØLED∂Àø⁄
 	while(1)
 	{
-     GPIOF->BSRRH=GPIO_Pin_9;//LED0‰∫Æ
-	   GPIOF->BSRRL=GPIO_Pin_10;//LED1ÁÅ≠
+     GPIOF->BSRRH=GPIO_Pin_9;//LED0¡¡
+	   GPIOF->BSRRL=GPIO_Pin_10;//LED1√
 		 delay_ms(500);
-     GPIOF->BSRRL=GPIO_Pin_9;//LED0ÁÅ≠
-	   GPIOF->BSRRH=GPIO_Pin_10;//LED1‰∫Æ
+     GPIOF->BSRRL=GPIO_Pin_9;//LED0√
+	   GPIOF->BSRRH=GPIO_Pin_10;//LED1¡¡
 		 delay_ms(500);
 
 	 }
